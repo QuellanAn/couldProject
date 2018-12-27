@@ -1,0 +1,39 @@
+<view class="container">
+    
+  <view class="time">时间：{{time}}s</view>
+  
+  <!-- 用户 openid -->
+  <view class="userinfo">
+    <button open-type="getUserInfo" bindgetuserinfo="onGetUserInfo"
+      class="userinfo-avatar" style="background-image: url({{avatarUrl}})"></button>
+
+    <!-- <view>
+      <button class="userinfo-nickname" bindtap="onGetOpenid">点击获取 openid</button>
+    </view> -->
+
+  <view class="score">分数：{{score}}</view>
+  </view>
+
+  <view class='topic'>
+    <label>{{topic_name}}</label>
+  </view>
+
+  <view class='key'>
+    <!-- <button >{{topic_key1}}</button>
+    <button >{{topic_key2}}</button>
+    <button >{{topic_key3}}</button>
+    <button >{{topic_key4}}</button> -->
+
+    <block wx:for="{{item}}">
+      <!-- <view>{{index}}:</view> -->
+      <view><button bindtap='submitKey' data-gid='{{item}}' data-time='{{time}}' id='{{index}}'>{{item}}</button></view>
+    </block>
+
+    <!-- <radio-group class="radio-group" bindchange="radioChange">
+      <view class="radio" wx:key="{{item}}" wx:for-item="i">
+        <radio value="{{i}}"/>
+        {{i}}
+      </view>
+    </radio-group> -->
+  </view>
+</view>

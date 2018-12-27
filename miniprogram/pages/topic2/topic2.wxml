@@ -1,0 +1,23 @@
+<view class="container">
+  <view class="time">页面2</view>
+  <view class="time">时间：{{time}}s</view>
+  
+  <!-- 用户 openid -->
+  <view class="userinfo">
+    <button open-type="getUserInfo" bindgetuserinfo="onGetUserInfo"
+      class="userinfo-avatar" style="background-image: url({{avatarUrl}})"></button>
+
+  <view class="score">分数：{{score}}</view>
+  </view>
+
+  <view class='topic'>
+    <label>{{topic_name}}</label>
+  </view>
+
+  <view class='key'>
+    <block wx:for="{{item}}">
+      <!-- <view>{{index}}:</view> -->
+      <view><button bindtap='submitKey' data-gid='{{item}}' data-time='{{time}}'>{{item}}</button></view>
+    </block>
+  </view>
+</view>

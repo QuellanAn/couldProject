@@ -1,0 +1,78 @@
+<!--pages/addTopic/addTopic.wxml-->
+<view>
+<button>语文</button>
+<!-- <button>数学</button>
+<button>英语</button>
+<button>物理</button>
+<button>化学</button>
+<button>生物</button>
+<button>政治</button>
+<button>地理</button>
+<button>历史</button>
+<button>其他</button> -->
+</view>
+
+<!-- <view>
+  <label>题目名称：</label>
+  <input  placeholder="输入题目" ></input>
+</view>
+
+<view>
+  <label>正确答案：</label>
+  <input  placeholder="输入正确答案" ></input>
+</view>
+
+<view>
+  <label>混淆答案：</label>
+  <input  placeholder="输入混淆答案" ></input>
+</view>
+<button>增加混淆答案</button> -->
+
+
+<!-- <view class="section">
+  <input maxlength="10" placeholder="最大输入长度10" />
+</view> -->
+
+
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <!-- <view class="section section_gap">
+    <view class="section__title">switch</view>
+    <switch name="switch" />
+  </view>
+  <view class="section section_gap">
+    <view class="section__title">slider</view>
+    <slider name="slider" show-value></slider>
+  </view> -->
+
+  <view class="section">
+    <view class="section__title">题目名称：</view>
+    <input type="text" name='topicName' placeholder="请输入" placeholder-class="placeholderStyle"></input>
+  </view>
+
+  <view class="section">
+    <view class="section__title">正确答案：</view>
+    <input type="text" name='correctKey'  placeholder="请输入" placeholder-class="placeholderStyle"></input>
+  </view>
+
+  <view class="section">
+    <view class="section__title">混淆答案：</view>
+    <input type="text" name='topKey1' placeholder="混淆答案1" placeholder-class="placeholderStyle"></input>
+    <input type="text" name='topKey2' placeholder="混淆答案2" placeholder-class="placeholderStyle"></input>
+    <input type="text" name='topKey3' placeholder="混淆答案3" placeholder-class="placeholderStyle"></input>
+  </view>
+  <!-- <button>增加混淆答案</button> -->
+
+  <view class="btn-area">
+    <button form-type="submit">Submit</button>
+    <button form-type="reset">Reset</button>
+  </view>
+</form>
+
+
+
+
+
+
+
+
+

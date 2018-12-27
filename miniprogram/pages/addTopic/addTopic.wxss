@@ -1,0 +1,21 @@
+/* pages/addTopic/addTopic.wxss */
+ button{
+  width: 80%;
+  margin-top: 20rpx;
+  background-color: rgb(220, 245, 244);
+  color: rgb(17, 1, 1);
+  border-radius: 98rpx; 
+}
+ button::after {
+  border-radius: 98rpx;
+}
+input{
+  width: 98%;
+  border: 2rpx solid #000;
+  margin: 20rpx auto;
+  border-radius:10rpx;
+}
+.placeholderStyle{
+  color:rgb(197, 194, 194);
+  font-size: 30rpx;
+}
