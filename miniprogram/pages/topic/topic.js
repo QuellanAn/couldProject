@@ -14,6 +14,7 @@ Page({
     time:15,
     score: 0,
     count:0,
+    randomNumber: 0,
   },
 
   onLoad: function () {
@@ -65,7 +66,12 @@ Page({
     //   }
     // })
     const db = wx.cloud.database();
-    db.collection('topic').doc('XCBvV3kPDdDCJ2tk').get().then(res => {
+    let random = Math.floor(Math.random() * 6);
+    while(random == this.data.randomNumber){
+      random = Math.floor(Math.random() * 6);
+    }
+    let topicId = "topic00" + random;
+    db.collection('topic').doc(topicId).get().then(res => {
       // res.data 包含该记录的数据
       this.setData({
         topic_name: res.data.topic_name,
@@ -146,28 +152,33 @@ Page({
   onReady: function () {
     var count;
     var score;
+    var randomNumber;
     try {
       //不是第一题
       count = wx.getStorageSync('count');
       score = wx.getStorageSync('score');
+      randomNumber = wx.getStorageSync('randomNumber');
     } catch (e) {
       //开始答题第一题
       count=0;
       score=0;
+      randomNumber =0;
     }
     console.log("count:" + count);
     console.log("score:" + score);
     //如果大于10题，则结束游戏，显示最终得分。
-    if (count >= 11) {
+    if (count >= 6) {
       count=0;
       score = 0;
+      randomNumber = 0;
     }
-    if (count < 11) {
+    if (count < 6) {
       count++;
     }
     this.setData({
       count: count,
       score: score,
+      randomNumber: randomNumber,
     });
   },
 
