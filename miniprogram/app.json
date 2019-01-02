@@ -6,7 +6,6 @@
     "pages/databaseGuide/databaseGuide",
     "pages/addFunction/addFunction",
     "pages/topic/topic",
-    "pages/topic2/topic2",
     "pages/addTopic/addTopic",
     "pages/deployFunctions/deployFunctions",
     "pages/chooseLib/chooseLib" 

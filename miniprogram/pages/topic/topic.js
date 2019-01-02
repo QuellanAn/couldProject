@@ -138,7 +138,7 @@ Page({
       data: $this.data.score
     });
     wx.redirectTo({
-      url: '../topic2/topic2',
+      url: '../topic/topic',
     });
   },
 
